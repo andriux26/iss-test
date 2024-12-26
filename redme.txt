@@ -1,0 +1,4 @@
+crontab -e
+
+
+@reboot screen -dmS iss_tracking python3 /home/pi/iss/iss.py
