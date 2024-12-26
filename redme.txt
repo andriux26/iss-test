@@ -8,4 +8,6 @@ screen -ls  // testas
 
 screen -r iss_tracking   // prisijungia
 
-iss   // terminale
+iss   // terminalesudo qsstv --platform offscreen --file /home/pi/audio/ISSxxxxxxxxxxxxxx.wav --output-dir /home/pi/foto/
+
+
