@@ -2,3 +2,10 @@ crontab -e
 
 
 @reboot screen -dmS iss_tracking python3 /home/pi/iss/iss.py
+
+
+screen -ls  // testas
+
+screen -r iss_tracking   // prisijungia
+
+iss   // terminale
