@@ -10,4 +10,41 @@ screen -r iss_tracking   // prisijungia
 
 iss   // terminalesudo qsstv --platform offscreen --file /home/pi/audio/ISSxxxxxxxxxxxxxx.wav --output-dir /home/pi/foto/
 
+===========================================================================================
+sudo nano /etc/systemd/system/iss.service
+
+
+---------------------
+[Unit]
+Description=ISS Satellite Tracking Script
+After=network.targetsudo systemctl start iss.service
+
+
+[Service]
+ExecStart=/usr/bin/python3 /kelias/iki/jusu/skripto/iss.py
+WorkingDirectory=/kelias/iki/jusu/skripto
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+------------------------------------------------------------------
+sudo systemctl daemon-reload
+sudo systemctl enable iss.service
+-------------------------------------------------------------------
+
+sudo systemctl start iss.service
+---------------------------------------------------------------
+sudo systemctl status iss.service
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
